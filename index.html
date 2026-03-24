@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Studio - Interior Design & Decor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Lato', sans-serif; background: #faf9f7; color: #333; }
+        
+        .demo-badge { position: fixed; top: 10px; right: 10px; background: #ff6b6b; color: white; padding: 8px 12px; border-radius: 20px; font-size: 11px; z-index: 1000; }
+        
+        header { position: fixed; top: 0; width: 100%; background: white; border-bottom: 1px solid #e0d5c8; z-index: 100; }
+        nav { max-width: 1200px; margin: 0 auto; padding: 1.5rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Playfair Display', serif; font-size: 26px; color: #8B7355; }
+        nav a { color: #8B7355; text-decoration: none; margin: 0 2rem; font-weight: 600; font-size: 13px; }
+        
+        .btn-primary { background: #8B7355; color: white; padding: 0.75rem 1.5rem; text-decoration: none; font-weight: 600; transition: all 0.3s; cursor: pointer; }
+        .btn-primary:hover { background: #6d5845; }
+        
+        section { padding: 5rem 2rem; max-width: 1200px; margin: 0 auto; }
+        
+        .hero { margin-top: 70px; min-height: calc(100vh - 70px); background: linear-gradient(135deg, #8B7355, #a89882); color: white; display: flex; align-items: center; }
+        .hero-content { text-align: center; }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: 3.5rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.1rem; margin-bottom: 2rem; }
+        
+        .section-header { text-align: center; margin-bottom: 3rem; }
+        .section-header .label { color: #8B7355; font-size: 12px; font-weight: 700; }
+        .section-header h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; }
+        
+        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; }
+        .project-card { background: white; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .project-card img { width: 100%; height: 200px; object-fit: cover; }
+        .project-card h3 { color: #8B7355; padding: 1.5rem 1.5rem 0.5rem; }
+        .project-card p { padding: 0 1.5rem 1.5rem; color: #999; }
+        
+        .contact-section { background: #8B7355; color: white; }
+        .contact-section h2 { color: white; }
+        .contact-info { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+        .contact-card { background: rgba(255,255,255,0.1); padding: 1.5rem; }
+        
+        .whatsapp-btn { display: inline-flex; background: #25D366; color: white; padding: 0.75rem 1.5rem; border-radius: 50px; text-decoration: none; font-weight: 600; }
+        
+        footer { background: #6d5845; color: white; text-align: center; padding: 2rem; }
+    </style>
+</head>
+<body>
+    <div class="demo-badge">Demo - Click WhatsApp</div>
+    <header>
+        <nav>
+            <div class="logo">🎨 Design Studio</div>
+            <div style="display: flex; gap: 2rem;">
+                <a href="#portfolio">Portfolio</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <a id="whatsappNav" href="#" class="btn-primary">Consult Now</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 id="businessName">Transform Spaces</h1>
+            <p id="businessDescription">Expert interior design and spatial planning for your dream home</p>
+            <div style="display: flex; gap: 1rem; justify-content: center;">
+                <a id="whatsappHero" href="#" class="btn-primary">Start Project</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio">
+        <div class="section-header">
+            <span class="label">Our Work</span>
+            <h2>Recent Projects</h2>
+        </div>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=200&fit=crop" alt="Modern Living">
+                <h3>Modern Living Room</h3>
+                <p>Contemporary design with minimalist furniture</p>
+            </div>
+            <div class="project-card">
+                <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=200&fit=crop" alt="Kitchen">
+                <h3>Designer Kitchen</h3>
+                <p>Functional and stylish kitchen renovation</p>
+            </div>
+            <div class="project-card">
+                <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=200&fit=crop" alt="Bedroom">
+                <h3>Luxury Bedroom</h3>
+                <p>Elegant bedroom with premium finishes</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <div class="section-header">
+            <span class="label">Let's Talk</span>
+            <h2>Work With Us</h2>
+        </div>
+        <div class="contact-info">
+            <div class="contact-card">
+                <h3>📍 Location</h3>
+                <p id="contactLocation">Design District, Siliguri</p>
+            </div>
+            <div class="contact-card">
+                <h3>📞 Phone</h3>
+                <p id="contactPhone">+91 98765 43210</p>
+            </div>
+            <div class="contact-card">
+                <h3>⏰ Hours</h3>
+                <p>Mon-Fri: 10:00 AM - 6:00 PM</p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 2rem;">
+            <a id="whatsappFooter" href="#" class="whatsapp-btn">Chat with Designer</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Design Studio - Creating Beautiful Spaces.</p>
+    </footer>
+
+    <script src="../assets/inject-data.js"></script>
+    <script>window.TEMPLATE_CATEGORY = 'interior';</script>
+</body>
+</html>
